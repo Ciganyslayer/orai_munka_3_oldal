@@ -4,19 +4,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Custom Made</title>
-    <link rel="stylesheet" href="indexstyle.css">
+    <title>Make your own custom order</title>
     <link rel="stylesheet" href="navstyle.css">
     <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="order.css">
 </head>
 
-<body style=" font-family: Arial, Helvetica, sans-serif;">
-
-    <div class="logo-container">
-        <img src="images/abtlogo.png" alt="ABT Logo">
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <div class="logo-container" style="width: 240px; top: 16px; left: 16px;">
+        <a href="index.html"><img src="images/abtlogo.png" alt="ABT Logo"></a>
     </div>
     <nav>
         <a style="font-size: small;" href="index.html">ABT Legacy Edition</a>
         <a style="font-size: small;" href="specs.html">More Detailed Specification</a>
         <a style="font-size: small;" href="order.html">Order Custom Made</a>
     </nav>
+
+    <header>
+        <h1>Customise Your Audi RS7 ABT Legacy Edition</h1>
+    </header>
+
+    <main>
+        <form action="/submit-order" method="post">
+
+            <section>
+                <h2>1. Choose Exterior Color</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="radio" id="color-nardo" name="exterior-color" value="nardo-grey" checked>
+                        </td>
+                        <td>
+                            <label for="color-nardo">Nardo Grey Matte (€0)</label>
+                        </td>
+                        <td>
+                            <img src="images/nardogrey.jpg" alt="Nardo Grey" width="80">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="radio" id="color-white" name="exterior-color" value="glacier-white">
+                        </td>
+                        <td>
+                            <label for="color-white">Glacier White Metallic (€12,000)</label>
+                        </td>
+                        <td>
+                            <img src="images/glacierwhite.jpg" alt="Glacier White" width="80">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="radio" id="color-green" name="exterior-color" value="sonoma-green">
+                        </td>
+                        <td>
+                            <label for="color-green">Sonoma Green Matte (€10,000)</label>
+                        </td>
+                        <td>
+                            <img src="images/sonomagreen.jpg" alt="Sonoma Green" width="80">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="radio" id="color-red" name="exterior-color" value="ferrari-red">
+                        </td>
+                        <td>
+                            <label for="color-red">Ferrari Red Metallic (€18,000)</label>
+                        </td>
+                        <td>
+                            <img src="images/ferrarired.jpg" alt="Ferrari Red" width="80">
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>2. Add Optional Extras</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="extra-carbon-interior" name="extras" value="carbon-interior">
+                        </td>
+                        <td>
+                            <label for="extra-carbon-interior">Extended Carbon Fiber Interior Package (€4,000)</label>
+                        </td>
+                        <td>
+                            <img src="images/interiorcarbon.webp" alt="Extended Carbon Fiber Interior" width="80">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="extra-ceramic-brakes" name="extras" value="ceramic-brakes">
+                        </td>
+                        <td>
+                            <label for="extra-ceramic-brakes">Audi Ceramic Brake System (€5,500)</label>
+                        </td>
+                        <td>
+                            <img src="images/brakes.jpg" alt="Audi Ceramic Brake System" width="80">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="extra-sound-system" name="extras" value="bang-olufsen">
+                        </td>
+                        <td>
+                            <label for="extra-sound-system">Bang & Olufsen Advanced Sound System (€2,500)</label>
+                        </td>
+                        <td>
+                            <img src="images/soundsystem.jpg" alt="Bang & Olufsen Advanced Sound System" width="80">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="extra-power-upgrade" name="extras" value="1000hp-upgrade">
+                        </td>
+                        <td>
+                            <label for="extra-power-upgrade">ABT POWER R "1000 HP" Upgrade (€30,000)</label>
+                        </td>
+                        <td>
+                            <img src="images/power.jpg" alt="ABT POWER R 1000 HP Engine Upgrade" width="80">
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>3. Your Contact Information</h2>
+                <div>
+                    <label for="full-name">Full Name:</label><br>
+                    <input type="text" id="full-name" name="full-name" required size="40">
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required size="40">
+                </div>
+                <br>
+                <div>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" size="40">
+                </div>
+            </section>
+
+            <section>
+                <button type="submit">Submit Your Configuration</button>
+            </section>
+
+        </form>
+    </main>
+
+    <footer>
+        <a href="specs.html">
+            <button>See Specifications</button>
+        </a>
+    </footer>
+
+</body>
+
+</html>
